@@ -4,19 +4,23 @@ title: 健康ログ HealthLog プライバシーポリシー
 
 # 健康ログ(HealthLog)プライバシーポリシー
 
-最終更新日: 2026年10月30日
+最終更新日: 2026年11月1日
 
-開発者: 本アプリのストア掲載(App Store)に表示されている開発者(以下「開発者」)
+開発者: 本アプリのストア掲載(App Store / Google Play)に表示されている開発者(以下「開発者」)
 連絡先: tektocraft.apps@gmail.com
 
-「健康ログ」(英語表示名 HealthLog、iOS。以下「本アプリ」)における、利用者の情報の取り扱いについて説明します。
+「健康ログ」(英語表示名 HealthLog、iOS / Android。以下「本アプリ」)における、利用者の情報の取り扱いについて説明します。
 
 ## 1. 本アプリで扱う情報と保存先
 
 - 利用者が入力する生活記録(時間帯ごとの活動、メモ、体重、睡眠時間)は、**利用者の端末内**と、利用者の **iCloud**(Apple の iCloud キー・バリュー ストレージ。端末間の同期用)に保存されます。開発者は、利用者の情報を保存するためのサーバーを運営しておらず、入力した情報が開発者へ送信されることはありません。
+- Android 版の生活記録(時間帯ごとの活動、メモ、体重)は、端末内に保存されます。Android の自動バックアップを有効にしている場合は、Google が提供するバックアップの仕組みで保存されることがあります。
+- バックアップ機能で書き出したファイル(JSON)は、利用者が共有画面で選んだ場所に保存されます。本アプリが、開発者や第三者へ送信することはありません。
 - 端末内には、このほか、アプリの利用回数(レビューのお願いを表示する時期の判断に使う数値)が保存されます。
 
 ## 2. ヘルスケア(HealthKit)について
+
+- **Android 版は、ヘルスケアのサービス(Health Connect など)と連携せず、体重や睡眠時間を、ほかのアプリへ書き込みも読み取りもしません。** 以下は、iOS 版の説明です。
 
 - 利用者が許可した場合に限り、本アプリは、入力された**体重**と**睡眠時間**を、Apple の「ヘルスケア」アプリに**書き込みます**。ヘルスケアのデータを**読み取ることはありません**。
 - ヘルスケアに書き込む情報は、広告、マーケティング、データの販売などの目的で、**使用も第三者への提供もしません**。広告サービス(3 を参照)に、ヘルスケアの情報や、本アプリに入力された生活記録が渡されることはありません。
@@ -26,7 +30,7 @@ title: 健康ログ HealthLog プライバシーポリシー
 
 本アプリは、広告配信のために Google LLC の広告サービス(Google AdMob)を利用しています。AdMob は、広告の配信・表示の最適化、不正対策などのために、次のような情報を取得・利用することがあります。
 
-- 広告識別子(IDFA)などの端末識別子
+- 広告識別子(iOS の IDFA、Android の広告ID)などの端末識別子
 - IP アドレス、おおよその位置
 - 端末情報、アプリの操作や広告の表示・操作に関する情報
 - クラッシュなどの診断情報
@@ -37,7 +41,7 @@ title: 健康ログ HealthLog プライバシーポリシー
 
 ### 同意と選択
 
-- 他社のアプリや Web サイトをまたいだトラッキングについて、アプリの起動後に許可の確認が表示されます。許可しない場合も、本アプリを利用できます(広告は表示されることがありますが、広告識別子は利用されません)。許可の設定は、端末の「設定」>「プライバシーとセキュリティ」>「トラッキング」から変更できます。
+- iOS では、他社のアプリや Web サイトをまたいだトラッキングについて、アプリの起動後に許可の確認が表示されます。許可しない場合も、本アプリを利用できます(広告は表示されることがありますが、広告識別子は利用されません)。許可の設定は、端末の「設定」>「プライバシーとセキュリティ」>「トラッキング」から変更できます。
 - 欧州経済領域(EEA)、英国、スイスの利用者には、広告の取り扱いに関する同意の画面が表示されます。
 - パーソナライズ広告は、端末の設定や Google の広告設定(https://myadcenter.google.com/)で変更できます。
 
@@ -69,19 +73,23 @@ tektocraft.apps@gmail.com
 
 # HealthLog (健康ログ) Privacy Policy
 
-Last updated: October 30, 2026
+Last updated: November 1, 2026
 
-Developer: the developer shown on the App's App Store listing ("the Developer")
+Developer: the developer shown on the App's App Store / Google Play listing ("the Developer")
 Contact: tektocraft.apps@gmail.com
 
-This policy explains how "HealthLog" (Japanese name: 健康ログ; iOS; "the App") handles user information.
+This policy explains how "HealthLog" (Japanese name: 健康ログ; iOS / Android; "the App") handles user information.
 
 ## 1. Information the App handles and where it is stored
 
 - The life records you enter (activities by time slot, notes, weight and sleep time) are stored **on your device** and in your own **iCloud** (Apple's iCloud key-value storage, used to sync between your devices). The Developer does not operate servers for storing user information, and what you enter is not sent to the Developer.
+- On Android, the life records you enter (activities by time slot, notes and weight) are stored on your device. If you enable Android's automatic backup, they may be backed up by Google's backup service.
+- Files you export with the backup feature (JSON) are saved wherever you choose in the share sheet. The App does not send them to the Developer or to third parties.
 - The App also stores on your device the number of times it has been opened (used to decide when to ask for a review).
 
 ## 2. Health (HealthKit)
+
+- **The Android version does not connect to health services (such as Health Connect), and neither writes your weight or sleep time to other apps nor reads anything from them.** The rest of this section describes the iOS version.
 
 - Only if you grant permission, the App **writes** the **weight** and **sleep time** you enter to Apple's Health app. The App does **not read** any Health data.
 - Information written to Health is **neither used nor disclosed to third parties** for advertising, marketing or data sales. No Health information, and none of the life records you enter in the App, is passed to the advertising service (see Section 3).
@@ -91,7 +99,7 @@ This policy explains how "HealthLog" (Japanese name: 健康ログ; iOS; "the App
 
 The App uses Google AdMob, a service of Google LLC, to show ads. AdMob may collect and use the following for ad delivery, optimization and fraud prevention:
 
-- Device identifiers such as the advertising identifier (IDFA)
+- Device identifiers such as the advertising ID (IDFA on iOS, advertising ID on Android)
 - IP address and approximate location
 - Device information, and information about app and ad interactions
 - Diagnostic information such as crash data
@@ -100,7 +108,7 @@ Google's handling of this information is governed by Google's Privacy Policy (ht
 
 ### Consent and choices
 
-- After launch, the App asks for your permission regarding tracking across other companies' apps and websites. You can use the App even if you decline (ads may still be shown, but the advertising identifier is not used). You can change this in Settings > Privacy & Security > Tracking.
+- On iOS, after launch, the App asks for your permission regarding tracking across other companies' apps and websites. You can use the App even if you decline (ads may still be shown, but the advertising identifier is not used). You can change this in Settings > Privacy & Security > Tracking.
 - Users in the European Economic Area, the United Kingdom and Switzerland are shown a consent screen for ad data.
 - You can manage ad personalization in your device settings and in Google's ad settings (https://myadcenter.google.com/).
 
