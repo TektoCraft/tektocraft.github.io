@@ -1,15 +1,15 @@
 ---
-title: 色あわせラボ / Hue Lab プライバシーポリシー
+title: 絶対色感チャレンジ / Hue Lab プライバシーポリシー
 ---
 
-# 色あわせラボ(Hue Lab)プライバシーポリシー
+# 絶対色感チャレンジ(Hue Lab)プライバシーポリシー
 
 最終更新日: 2026年11月6日
 
 開発者: 本アプリのストア掲載(App Store)に表示されている開発者(以下「開発者」)
 連絡先: tektocraft.apps@gmail.com
 
-「色あわせラボ」(英語表示名 Hue Lab、iOS / Android。以下「本アプリ」)における、利用者の情報の取り扱いについて説明します。
+「絶対色感チャレンジ」(英語表示名 Hue Lab、iOS / Android。以下「本アプリ」)における、利用者の情報の取り扱いについて説明します。
 
 ## 1. 本アプリで扱う情報と保存先
 
@@ -54,14 +54,14 @@ tektocraft.apps@gmail.com
 
 ---
 
-# Hue Lab (色あわせラボ) Privacy Policy
+# Hue Lab (絶対色感チャレンジ) Privacy Policy
 
 Last updated: November 6, 2026
 
 Developer: the developer shown on the App's App Store listing ("the Developer")
 Contact: tektocraft.apps@gmail.com
 
-This policy explains how "Hue Lab" (Japanese name: 色あわせラボ; iOS / Android; "the App") handles user information.
+This policy explains how "Hue Lab" (Japanese name: 絶対色感チャレンジ; iOS / Android; "the App") handles user information.
 
 ## 1. Information the App handles and where it is stored
 
