@@ -11,3 +11,4 @@ title: App Policies
 - [時間割 / MyClassTime — プライバシーポリシー / Privacy Policy](jikanwari/)
 - [健康ログ / HealthLog — プライバシーポリシー / Privacy Policy](lifelog/)
 - [絶対色感チャレンジ / Hue Lab — プライバシーポリシー / Privacy Policy](huelab/)
+- [毎日リズム練習 / Daily Rhythm Practice — プライバシーポリシー / Privacy Policy](dailyrhythm/)
