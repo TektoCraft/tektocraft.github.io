@@ -34,7 +34,7 @@ title: ピン2048 / Pin 2048 プライバシーポリシー
 ### 同意と選択
 
 - iOS では、他社のアプリや Web サイトをまたいだトラッキングについて、アプリの起動後に許可の確認が表示されます。許可しない場合も、本アプリを利用できます(広告は表示されることがありますが、広告識別子は利用されません)。許可の設定は、端末の「設定」>「プライバシーとセキュリティ」>「トラッキング」から変更できます。
-- 欧州経済領域(EEA)、英国、スイスの利用者には、広告の取り扱いに関する同意の画面が表示されます。
+- 欧州経済領域(EEA)、英国、スイスの利用者には、広告の取り扱いに関する同意の画面が表示されます。同意の設定は、本アプリの画面上部の「プライバシー設定」ボタンから、あとで変更できます。
 - パーソナライズ広告は、端末の設定や Google の広告設定(https://myadcenter.google.com/)で変更できます。
 
 ## 3. 第三者への提供
@@ -85,7 +85,7 @@ Google's handling of this information is governed by Google's Privacy Policy (ht
 ### Consent and choices
 
 - On iOS, after launch, the App asks for your permission regarding tracking across other companies' apps and websites. You can use the App even if you decline (ads may still be shown, but the advertising identifier is not used). You can change this in Settings > Privacy & Security > Tracking.
-- Users in the European Economic Area, the United Kingdom and Switzerland are shown a consent screen for ad data.
+- Users in the European Economic Area, the United Kingdom and Switzerland are shown a consent screen for ad data. You can change your choice later with the "Privacy settings" button at the top of the App's screen.
 - You can manage ad personalization in your device settings and in Google's ad settings (https://myadcenter.google.com/).
 
 ## 3. Disclosure to third parties
