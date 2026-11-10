@@ -12,3 +12,4 @@ title: App Policies
 - [健康ログ / HealthLog — プライバシーポリシー / Privacy Policy](lifelog/)
 - [絶対色感チャレンジ / Hue Lab — プライバシーポリシー / Privacy Policy](huelab/)
 - [毎日リズム練習 / Daily Rhythm Practice — プライバシーポリシー / Privacy Policy](dailyrhythm/)
+- [ピン2048 / Pin 2048 — プライバシーポリシー / Privacy Policy](pin2048/)
