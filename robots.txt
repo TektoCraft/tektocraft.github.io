@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tektocraft.github.io/sitemap.xml
