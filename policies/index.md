@@ -13,3 +13,4 @@ title: App Policies
 - [絶対色感チャレンジ / Hue Lab — プライバシーポリシー / Privacy Policy](huelab/)
 - [毎日リズム練習 / Daily Rhythm Practice — プライバシーポリシー / Privacy Policy](dailyrhythm/)
 - [ピン2048 / Pin 2048 — プライバシーポリシー / Privacy Policy](pin2048/)
+- [ABAB (Auto Blind Auto Blur) — プライバシーポリシー / Privacy Policy](abab/)
