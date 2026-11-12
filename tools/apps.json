@@ -149,20 +149,20 @@
    "hi"
   ],
   "shots": {
-   "ar": 4,
-   "de": 4,
-   "en": 4,
-   "es": 4,
-   "fr": 4,
-   "hi": 4,
-   "it": 4,
-   "ja": 4,
-   "ko": 4,
-   "pt": 4,
-   "ru": 4,
-   "th": 4,
-   "zh-hans": 4,
-   "zh-hant": 4
+   "ar": 3,
+   "de": 3,
+   "en": 3,
+   "es": 3,
+   "fr": 3,
+   "hi": 3,
+   "it": 3,
+   "ja": 3,
+   "ko": 3,
+   "pt": 3,
+   "ru": 3,
+   "th": 3,
+   "zh-hans": 3,
+   "zh-hant": 3
   },
   "ios": 1464675027,
   "play": "app.tektocraft.timetable"
@@ -270,5 +270,41 @@
   },
   "ios": null,
   "play": "app.tektocraft.pin_2048"
+ },
+ "abab": {
+  "langs": [
+   "ja",
+   "en",
+   "de",
+   "fr",
+   "es",
+   "pt",
+   "it",
+   "ru",
+   "ko",
+   "zh-hans",
+   "zh-hant",
+   "ar",
+   "th",
+   "hi"
+  ],
+  "shots": {
+   "ja": 3,
+   "en": 3,
+   "de": 3,
+   "fr": 3,
+   "es": 3,
+   "pt": 3,
+   "it": 3,
+   "ru": 3,
+   "ko": 3,
+   "zh-hans": 3,
+   "zh-hant": 3,
+   "ar": 3,
+   "th": 3,
+   "hi": 3
+  },
+  "ios": 1460811673,
+  "play": null
  }
 }

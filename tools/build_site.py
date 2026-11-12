@@ -54,6 +54,11 @@ APPS = [
     dict(slug='huelab', src='color_sense', policy='huelab', ios=None, play='app.tektocraft.color_sense'),
     dict(slug='dailyrhythm', src='snare_lab', policy='dailyrhythm', ios=6832241980, play='app.tektocraft.snare_lab'),
     dict(slug='pin2048', src='pin_2048', policy='pin2048', ios=None, play='app.tektocraft.pin_2048'),
+    # iOS のみ(Android 版なし)。アイコンとスクリーンショットは、ABAB のリポジトリから。
+    dict(slug='abab', src=None, policy='abab', ios=1460811673, play=None,
+         ios_json=os.path.join(DEV, 'ABAB/docs/listing-2.0.0.json'),
+         icon=os.path.join(DEV, 'ABAB/docs/icon/final/AppIcon-1024.png'),
+         shots_dir=os.path.join(DEV, 'ABAB/docs/store/final'), shots_names=('1.png', '2.png', '3.png')),
 ]
 
 # サイトの文言(14 言語)
@@ -113,11 +118,11 @@ def first(*paths):
 
 def load_app(a):
     """アプリごとに、言語 → {name, tagline, desc} と、アイコン、スクリーンショットを集める。"""
-    base = os.path.join(APPS_SRC, a['src'], 'store/android')
+    base = os.path.join(APPS_SRC, a['src'], 'store/android') if a.get('src') else None
     texts = {}
     ios = json.load(open(a['ios_json'], encoding='utf-8')) if a.get('ios_json') else {}
-    ldir = os.path.join(base, 'listing')
-    for d in sorted(os.listdir(ldir)):
+    ldir = os.path.join(base, 'listing') if base else None
+    for d in (sorted(os.listdir(ldir)) if ldir else []):
         code = LOCALE.get(d)
         if not code:
             continue
@@ -292,16 +297,32 @@ def main():
     sitemap = []
     for a in APPS:
         texts = load_app(a)
-        base = os.path.join(APPS_SRC, a['src'], 'store/android')
-        icon_src = next(p for p in (base + '/icon-512.png', base + '/icon512.png') if os.path.exists(p))
+        base = os.path.join(APPS_SRC, a['src'], 'store/android') if a.get('src') else None
+        icon_src = a['icon'] if a.get('icon') else next(p for p in (base + '/icon-512.png', base + '/icon512.png') if os.path.exists(p))
         out_icon = f'assets/img/{a["slug"]}/icon.png'
         os.makedirs(os.path.join(ROOT, os.path.dirname(out_icon)), exist_ok=True)
         Image.open(icon_src).convert('RGBA').resize((256, 256), Image.LANCZOS).save(os.path.join(ROOT, out_icon), optimize=True)
         acc = accent(icon_src)
         # スクリーンショット: 言語のフォルダにあればそれ、なければ en-US。同じ内容は、1 つの画像を使い回す。
         shots, done = {}, {}
-        sdir = os.path.join(base, 'screenshots')
+        sdir = os.path.join(base, 'screenshots') if base else None
         for code in texts:
+            if a.get('shots_dir'):
+                # ストア用の画像(<言語>/1.png ...)。サイトの言語コードを、フォルダ名(zh-hans → zh-Hans)に直す。
+                key = next((k for k, v in IOS_KEYS.items() if v == code), code)
+                files = [os.path.join(a['shots_dir'], key, n) for n in a['shots_names'] if os.path.exists(os.path.join(a['shots_dir'], key, n))]
+                urls = []
+                for n, f in enumerate(files, 1):
+                    h = hashlib.md5(open(f, 'rb').read()).hexdigest()
+                    if h not in done:
+                        rel = f'assets/img/{a["slug"]}/{code}-{n}.jpg'
+                        im = Image.open(f).convert('RGB')
+                        im = im.resize((540, int(im.size[1] * 540 / im.size[0])), Image.LANCZOS)
+                        im.save(os.path.join(ROOT, rel), 'JPEG', quality=80, optimize=True)
+                        done[h] = '/' + rel
+                    urls.append(done[h])
+                shots[code] = urls
+                continue
             locs = [d for d, c in LOCALE.items() if c == code and os.path.isdir(os.path.join(sdir, d))] or ['en-US']
             folder = os.path.join(sdir, locs[0])
             files = sorted(os.path.join(dp, f) for dp, _, fs in os.walk(folder) for f in fs if f.lower().endswith('.png'))[:6]
@@ -351,7 +372,8 @@ def main():
                 btns.append(f'<a class="btn" href="https://apps.apple.com/app/id{app["ios"]}" rel="noopener">{esc(T["app_store"][lang])}</a>')
             else:
                 btns.append(f'<span class="btn off">{esc(T["soon"][lang])}</span>')
-            btns.append(f'<a class="btn" href="https://play.google.com/store/apps/details?id={app["play"]}" rel="noopener">{esc(T["google_play"][lang])}</a>')
+            if app['play']:
+                btns.append(f'<a class="btn" href="https://play.google.com/store/apps/details?id={app["play"]}" rel="noopener">{esc(T["google_play"][lang])}</a>')
             sh = app['shots'].get(lang) or app['shots'].get('en') or []
             shots = ''.join(f'<img src="{u}" alt="{esc(nm)} {i}" loading="lazy" width="360">' for i, u in enumerate(sh, 1))
             doc = []
@@ -368,7 +390,7 @@ def main():
                     + f'<div class="doc">{"".join(doc)}</div>'
                     + f'<h2>{esc(T["privacy"][lang])}</h2><p><a href="/{app["policy"]}/">{esc(T["privacy"][lang])}</a></p>')
             ld = {'@context': 'https://schema.org', '@type': 'MobileApplication', 'name': nm, 'description': t['tagline'],
-                  'operatingSystem': 'iOS, Android', 'applicationCategory': 'UtilitiesApplication', 'image': BASE + app['icon'],
+                  'operatingSystem': 'iOS, Android' if app['play'] else 'iOS', 'applicationCategory': 'UtilitiesApplication', 'image': BASE + app['icon'],
                   'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}, 'inLanguage': LANGS[lang][1]}
             write(f'{lang}/{slug}/index.html', page(lang, f'{nm} — TektoCraft', t['tagline'] or nm, body, alts, f'/{lang}/{slug}/', app=slug,
                                                     accent_rgb=tuple(app['accent']), og_image=app['icon'], jsonld=ld))
