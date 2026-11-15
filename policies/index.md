@@ -15,3 +15,4 @@ title: App Policies
 - [ピン2048 / Pin 2048 — プライバシーポリシー / Privacy Policy](pin2048/)
 - [ABAB (Auto Blind Auto Blur) — プライバシーポリシー / Privacy Policy](abab/)
 - [通知メモ / Task Note — プライバシーポリシー / Privacy Policy](tasknote/)
+- [めぐるボード / Cycle Board — プライバシーポリシー / Privacy Policy](meguruboard/)
