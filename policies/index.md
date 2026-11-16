@@ -16,3 +16,4 @@ title: App Policies
 - [ABAB (Auto Blind Auto Blur) — プライバシーポリシー / Privacy Policy](abab/)
 - [通知メモ / Task Note — プライバシーポリシー / Privacy Policy](tasknote/)
 - [めぐるボード / Cycle Board — プライバシーポリシー / Privacy Policy](meguruboard/)
+- [Hzメトロノーム / Hz Metronome — プライバシーポリシー / Privacy Policy](hzmetronome/)
