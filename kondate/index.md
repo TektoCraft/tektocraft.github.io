@@ -21,7 +21,7 @@ title: 献立提案くん / Kondate Teian-kun プライバシーポリシー
 
 ## 2. 共有機能について
 
-買い物メモや献立の「共有」を押したときだけ、その文章が、端末の共有画面(OS の標準機能)に渡されます。どのアプリに送るか(メッセージ、メモなど)は、利用者が選びます。開発者には送信されません。
+買い物メモの「共有」を押したときだけ、その文章が、端末の共有画面(OS の標準機能)に渡されます。どのアプリに送るか(メッセージ、メモなど)は、利用者が選びます。開発者には送信されません。
 
 ## 3. 広告について
 
@@ -81,7 +81,7 @@ This policy explains how "Kondate Teian-kun" (Japanese name: 献立提案くん;
 
 ## 2. Sharing
 
-Only when you tap "Share" for a shopping list or menu, its text is handed to the operating system's share sheet. You choose which app receives it. It is not sent to the Developer.
+Only when you tap "Share" on the shopping list, its text is handed to the operating system's share sheet. You choose which app receives it. It is not sent to the Developer.
 
 ## 3. Advertising
 
