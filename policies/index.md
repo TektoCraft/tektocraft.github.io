@@ -17,3 +17,4 @@ title: App Policies
 - [通知メモ / Task Note — プライバシーポリシー / Privacy Policy](tasknote/)
 - [めぐるボード / Cycle Board — プライバシーポリシー / Privacy Policy](meguruboard/)
 - [Hzメトロノーム / Hz Metronome — プライバシーポリシー / Privacy Policy](hzmetronome/)
+- [献立提案くん / Kondate Teian-kun — プライバシーポリシー / Privacy Policy](kondate/)
