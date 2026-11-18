@@ -271,6 +271,128 @@
   "ios": null,
   "play": "app.tektocraft.pin_2048"
  },
+ "tasknote": {
+  "langs": [
+   "ja",
+   "en",
+   "de",
+   "fr",
+   "es",
+   "it",
+   "zh-hans",
+   "zh-hant",
+   "ar",
+   "hi"
+  ],
+  "shots": {
+   "ar": 5,
+   "de": 5,
+   "en": 5,
+   "es": 5,
+   "fr": 5,
+   "hi": 5,
+   "it": 5,
+   "ja": 5,
+   "zh-hans": 5,
+   "zh-hant": 5
+  },
+  "ios": 1451523462,
+  "play": "app.tektocraft.task_note"
+ },
+ "meguruboard": {
+  "langs": [
+   "ja",
+   "en",
+   "de",
+   "fr",
+   "es",
+   "it",
+   "zh-hans",
+   "zh-hant",
+   "ar",
+   "hi"
+  ],
+  "shots": {
+   "ar": 6,
+   "de": 6,
+   "en": 6,
+   "es": 6,
+   "fr": 6,
+   "hi": 6,
+   "it": 6,
+   "ja": 6,
+   "zh-hans": 6,
+   "zh-hant": 6
+  },
+  "ios": null,
+  "play": "app.tektocraft.progress_board"
+ },
+ "hzmetronome": {
+  "langs": [
+   "ja",
+   "en",
+   "de",
+   "fr",
+   "es",
+   "it",
+   "zh-hans",
+   "zh-hant",
+   "ar",
+   "hi"
+  ],
+  "shots": {
+   "ar": 5,
+   "de": 5,
+   "en": 5,
+   "es": 5,
+   "fr": 5,
+   "hi": 5,
+   "it": 5,
+   "ja": 5,
+   "zh-hans": 5,
+   "zh-hant": 5
+  },
+  "ios": null,
+  "play": null
+ },
+ "kondate": {
+  "langs": [
+   "ja"
+  ],
+  "shots": {
+   "ja": 6
+  },
+  "ios": null,
+  "play": null
+ },
+ "eengei": {
+  "langs": [
+   "ja",
+   "en",
+   "de",
+   "fr",
+   "es",
+   "it",
+   "zh-hans",
+   "zh-hant",
+   "ar",
+   "hi"
+  ],
+  "shots": {
+   "ar": 6,
+   "de": 6,
+   "en": 6,
+   "es": 6,
+   "fr": 6,
+   "hi": 6,
+   "it": 6,
+   "ja": 6,
+   "zh-hans": 6,
+   "zh-hant": 6
+  },
+  "ios": null,
+  "play": null
+ },
  "abab": {
   "langs": [
    "ja",

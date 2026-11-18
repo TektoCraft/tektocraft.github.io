@@ -54,6 +54,12 @@ APPS = [
     dict(slug='huelab', src='color_sense', policy='huelab', ios=None, play='app.tektocraft.color_sense'),
     dict(slug='dailyrhythm', src='snare_lab', policy='dailyrhythm', ios=6832241980, play='app.tektocraft.snare_lab'),
     dict(slug='pin2048', src='pin_2048', policy='pin2048', ios=None, play='app.tektocraft.pin_2048'),
+    dict(slug='tasknote', src='task_note', policy='tasknote', ios=1451523462, play='app.tektocraft.task_note'),
+    dict(slug='meguruboard', src='progress_board', policy='meguruboard', ios=None, play='app.tektocraft.progress_board'),
+    # ストア公開前(審査中・提出準備中)は、ios=None / play=None + play_soon=True にして、「近日公開」と表示する。公開されたら、ID を入れる。
+    dict(slug='hzmetronome', src='hz_metronome', policy='hzmetronome', ios=None, play=None, play_soon='app.tektocraft.hz_metronome'),
+    dict(slug='kondate', src='kondate_kun', policy='kondate', ios=None, play=None, play_soon='app.tektocraft.kondate_kun'),
+    dict(slug='eengei', src='e_engei', policy='eengei', ios=None, play=None, play_soon='app.tektocraft.e_bonsai'),
     # iOS のみ(Android 版なし)。アイコンとスクリーンショットは、ABAB のリポジトリから。
     dict(slug='abab', src=None, policy='abab', ios=1460811673, play=None,
          ios_json=os.path.join(DEV, 'ABAB/docs/listing-2.0.0.json'),
@@ -82,6 +88,10 @@ T = {
                  es='App Store: próximamente', pt='App Store: em breve', it='App Store: prossimamente', ru='App Store: скоро',
                  ko='App Store: 출시 예정', **{'zh-hans': 'App Store：即将上线', 'zh-hant': 'App Store：即將上架'}, ar='App Store: قريبًا',
                  th='App Store: เร็ว ๆ นี้', hi='App Store: जल्द आ रहा है'),
+    'soon_play': dict(ja='Google Play は近日公開', en='Google Play: coming soon', de='Google Play: demnächst', fr='Google Play : bientôt',
+                      es='Google Play: próximamente', pt='Google Play: em breve', it='Google Play: prossimamente', ru='Google Play: скоро',
+                      ko='Google Play: 출시 예정', **{'zh-hans': 'Google Play：即将上线', 'zh-hant': 'Google Play：即將上架'}, ar='Google Play: قريبًا',
+                      th='Google Play: เร็ว ๆ นี้', hi='Google Play: जल्द आ रहा है'),
     'screenshots': dict(ja='スクリーンショット', en='Screenshots', de='Screenshots', fr="Captures d'écran", es='Capturas de pantalla',
                         pt='Capturas de tela', it='Schermate', ru='Скриншоты', ko='스크린샷', **{'zh-hans': '屏幕截图', 'zh-hant': '螢幕截圖'},
                         ar='لقطات الشاشة', th='ภาพหน้าจอ', hi='स्क्रीनशॉट'),
@@ -374,6 +384,8 @@ def main():
                 btns.append(f'<span class="btn off">{esc(T["soon"][lang])}</span>')
             if app['play']:
                 btns.append(f'<a class="btn" href="https://play.google.com/store/apps/details?id={app["play"]}" rel="noopener">{esc(T["google_play"][lang])}</a>')
+            elif app.get('play_soon'):
+                btns.append(f'<span class="btn off">{esc(T["soon_play"][lang])}</span>')
             sh = app['shots'].get(lang) or app['shots'].get('en') or []
             shots = ''.join(f'<img src="{u}" alt="{esc(nm)} {i}" loading="lazy" width="360">' for i, u in enumerate(sh, 1))
             doc = []
@@ -390,7 +402,7 @@ def main():
                     + f'<div class="doc">{"".join(doc)}</div>'
                     + f'<h2>{esc(T["privacy"][lang])}</h2><p><a href="/{app["policy"]}/">{esc(T["privacy"][lang])}</a></p>')
             ld = {'@context': 'https://schema.org', '@type': 'MobileApplication', 'name': nm, 'description': t['tagline'],
-                  'operatingSystem': 'iOS, Android' if app['play'] else 'iOS', 'applicationCategory': 'UtilitiesApplication', 'image': BASE + app['icon'],
+                  'operatingSystem': 'iOS, Android' if (app['play'] or app.get('play_soon')) else 'iOS', 'applicationCategory': 'UtilitiesApplication', 'image': BASE + app['icon'],
                   'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}, 'inLanguage': LANGS[lang][1]}
             write(f'{lang}/{slug}/index.html', page(lang, f'{nm} — TektoCraft', t['tagline'] or nm, body, alts, f'/{lang}/{slug}/', app=slug,
                                                     accent_rgb=tuple(app['accent']), og_image=app['icon'], jsonld=ld))
