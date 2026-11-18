@@ -18,3 +18,4 @@ title: App Policies
 - [めぐるボード / Cycle Board — プライバシーポリシー / Privacy Policy](meguruboard/)
 - [Hzメトロノーム / Hz Metronome — プライバシーポリシー / Privacy Policy](hzmetronome/)
 - [献立提案くん / Kondate Teian-kun — プライバシーポリシー / Privacy Policy](kondate/)
+- [ドット盆栽 / e-Bonsai — プライバシーポリシー / Privacy Policy](eengei/)
