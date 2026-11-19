@@ -50,7 +50,11 @@ APPS = [
     dict(slug='kyudo', src='kyudo', policy='kyudo', ios=1465454417, play='app.tektocraft.kyudo'),
     dict(slug='jikanwari', src='timetable', policy='jikanwari', ios=1464675027, play='app.tektocraft.timetable',
          ios_json=os.path.join(DEV, 'Jikanwari/docs/listing-1.2.0.json')),
-    dict(slug='lifelog', src='life_log', policy='lifelog', ios=1460523405, play='app.tektocraft.life_log'),
+    # 健康ログ 1.3.0 / Android 1.1.0: 文面(14 言語)・新アイコン・新スクリーンショットは、LifeLog の docs から。
+    dict(slug='lifelog', src='life_log', policy='lifelog', ios=1460523405, play='app.tektocraft.life_log',
+         ios_json=os.path.join(DEV, 'LifeLog/docs/listing-next.json'),
+         icon=os.path.join(DEV, 'LifeLog/docs/icon/final/AppIcon-1024.png'),
+         shots_dir=os.path.join(DEV, 'LifeLog/docs/store-images'), shots_names=('shot_1.png', 'shot_2.png', 'shot_3.png', 'shot_4.png')),
     dict(slug='huelab', src='color_sense', policy='huelab', ios=None, play='app.tektocraft.color_sense'),
     dict(slug='dailyrhythm', src='snare_lab', policy='dailyrhythm', ios=6832241980, play='app.tektocraft.snare_lab'),
     dict(slug='pin2048', src='pin_2048', policy='pin2048', ios=None, play='app.tektocraft.pin_2048'),
