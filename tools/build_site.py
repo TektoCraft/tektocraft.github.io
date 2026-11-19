@@ -435,6 +435,16 @@ location.replace('/'+(l||'en')+'/')}})();</script></head>
     summary = {s: dict(langs=[c for c in LANGS if c in a['texts']], shots={c: len(v) for c, v in a['shots'].items()}, ios=a['ios'], play=a['play'])
                for s, a in data.items()}
     write('tools/apps.json', json.dumps(summary, ensure_ascii=False, indent=1))
+    # アプリ内の「同じ作者のアプリ」が取りに来る一覧(/apps.json)。バナーは各アプリに組み込み、一覧だけをここから取る。
+    # 公開状況(ios / play が null でないものだけ、そのストアの端末に出る)・並び順・名前と一言(言語ごと)・アイコンの URL。
+    # 形式を変えるときは、v を上げて、古いアプリが読める形を残す(アプリはずっと端末に残る)。
+    ORDER = ['lifelog', 'learninglog', 'jikanwari', 'tasknote', 'meguruboard', 'kondate', 'pin2048', 'abab',
+             'dailyrhythm', 'hzmetronome', 'huelab', 'kyudo', 'historycalc', 'scientificcalc', 'eengei']
+    ordered = sorted(data.items(), key=lambda kv: ORDER.index(kv[0]) if kv[0] in ORDER else len(ORDER))
+    feed = dict(v=1, apps=[dict(slug=s, ios=a['ios'], play=a['play'], icon=f'{BASE}{a["icon"]}',
+                                texts={c: dict(name=short_name(t['name']), tagline=t['tagline']) for c, t in a['texts'].items()})
+                           for s, a in ordered])
+    write('apps.json', json.dumps(feed, ensure_ascii=False, separators=(',', ':')))
     print('pages:', len(sitemap))
     for s, v in summary.items():
         print(s, len(v['langs']), 'langs', 'ios' if v['ios'] else 'ios:soon')
