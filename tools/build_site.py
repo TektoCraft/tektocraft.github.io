@@ -62,7 +62,7 @@ APPS = [
     dict(slug='meguruboard', src='progress_board', policy='meguruboard', ios=None, play='app.tektocraft.progress_board'),
     # ストア公開前(審査中・提出準備中)は、ios=None / play=None + play_soon=True にして、「近日公開」と表示する。公開されたら、ID を入れる。
     dict(slug='hzmetronome', src='hz_metronome', policy='hzmetronome', ios=None, play=None, play_soon='app.tektocraft.hz_metronome'),
-    dict(slug='kondate', src='kondate_kun', policy='kondate', ios=None, play=None, play_soon='app.tektocraft.kondate_kun'),
+    dict(slug='kondate', src='kondate_kun', policy='kondate', ios=6835494771, play=None, play_soon='app.tektocraft.kondate_kun'),
     dict(slug='eengei', src='e_engei', policy='eengei', ios=None, play=None, play_soon='app.tektocraft.e_bonsai'),
     # iOS のみ(Android 版なし)。アイコンとスクリーンショットは、ABAB のリポジトリから。
     dict(slug='abab', src=None, policy='abab', ios=1460811673, play=None,
