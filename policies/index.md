@@ -19,3 +19,4 @@ title: App Policies
 - [Hzメトロノーム / Hz Metronome — プライバシーポリシー / Privacy Policy](hzmetronome/)
 - [献立提案くん / Kondate Teian-kun — プライバシーポリシー / Privacy Policy](kondate/)
 - [ドット盆栽 / e-Bonsai — プライバシーポリシー / Privacy Policy](eengei/)
+- [植物管理帳 / Plant Ledger — プライバシーポリシー / Privacy Policy](plantledger/)
