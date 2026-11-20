@@ -23,6 +23,8 @@ title: 植物管理帳 / Plant Ledger プライバシーポリシー
 - **カメラ・写真**: 植物の写真を台帳に追加するときだけ、利用者の操作で、カメラまたは写真ライブラリにアクセスします。選んだ写真は、本アプリの端末内の保存領域に複製され、開発者には送信されません。許可しなくても、写真以外の機能は利用できます。
 - **通知**: 「今月の作業」などの通知を、利用者が有効にした場合に、端末の中で予約して表示します(任意)。通知の内容は、開発者のサーバーを経由しません。
 - **バックアップの書き出し・取り込み**: 利用者が操作したときだけ、データ(JSON と写真の zip)を、端末の共有画面やファイル選択画面を通じて、書き出し・取り込みます。保存先や共有先は、利用者が選びます。開発者には送信されません。
+- **レビューのお願い**: 条件を満たしたときに、OS の標準のレビュー依頼の画面を一度だけ表示することがあります。表示するかどうかの判断は、端末内の情報だけで行います。
+- **「同じ作者のアプリ」の一覧**: 設定画面で、開発者の紹介サイト(tektocraft.github.io)から、アプリの一覧(名前・説明・アイコン)を取得します。通常の通信と同じく、利用者の IP アドレスが、サイトの配信元(GitHub Pages)に届きます。利用者の記録や端末の識別子は送りません。紹介ページのリンクを開くと、端末のブラウザでサイトが表示されます。
 - 本アプリは、位置情報、マイク、連絡先へのアクセスを求めません。
 
 ## 3. 広告について
@@ -89,6 +91,8 @@ This policy explains how "Plant Ledger" (Japanese name: 植物管理帳; iOS / A
 - **Camera and photos**: The App accesses the camera or the photo library only when you choose to add a plant photo. Selected photos are copied into the App's storage on your device and are not sent to the Developer. You can use the rest of the App without granting access.
 - **Notifications**: If you enable them, reminders such as "This month's tasks" are scheduled and shown on your device (optional). They do not go through the Developer's servers.
 - **Backup export and import**: Only when you choose to, data (JSON and a zip of photos) is exported or imported through your device's share sheet or file picker. You choose where it is saved or shared. It is not sent to the Developer.
+- **Review request**: When certain conditions are met, the App may show the operating system's standard review prompt once. The decision is made using on-device information only.
+- **"More apps by the developer" list**: In settings, the App fetches a list of apps (names, descriptions, icons) from the developer's website (tektocraft.github.io). As with any network request, your IP address reaches the site's host (GitHub Pages). Your records and device identifiers are not sent. Opening a page link shows the website in your device's browser.
 - The App does not ask for access to your location, microphone or contacts.
 
 ## 3. Advertising
